@@ -1,0 +1,10 @@
+<h1>Info of Movie</h1>
+
+<p>Title: <%= @movie.title %> </p>
+<p>Genre: <%= @movie.genre %></p>
+<p>Year: <%= @movie.year %></p>
+<p>Country: <%= @movie.country %></p>
+<p>Published at: <%= @movie.published_at %></p>
+<p>Descripton: <%= @movie.description %></p>
+
+<%= link_to 'Remove this movie', movie_path , method: :delete %>
