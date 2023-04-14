@@ -30,7 +30,8 @@ class MoviesController < ApplicationController
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-    redirect_to movies_path
+    # No need for app/views/movies/destroy.html.erb
+    redirect_to movies_path, status: :see_other
   end
 
   private

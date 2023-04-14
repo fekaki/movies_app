@@ -7,4 +7,13 @@
 <p>Published at: <%= @movie.published_at %></p>
 <p>Descripton: <%= @movie.description %></p>
 
-<%= link_to 'Remove this movie', movie_path , method: :delete %>
+<p>
+  <%= link_to 'Edit', edit_movie_path(@movie) %>
+</p>
+
+<p>
+  <%= link_to 'Delete this movie',
+    movie_path(@movie),
+    data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}
+  %>
+</p>
